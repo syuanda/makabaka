@@ -2,7 +2,7 @@
 local config = {}
 
 config.options = {
-	transparent_background = false,
+	transparent_background = true, -- change to default background
 	term_colors = false,
 	styles = {
 		comments = "italic",

@@ -12,14 +12,14 @@ function M.get(cp)
 		-- you explicitly want to support Treesitter's improved syntax awareness.
 		TSField = { fg = cp.catppuccin2 }, -- For fields.
 		TSProperty = { fg = cp.catppuccin8, style = "italic" }, -- Same as TSField.
-		TSInclude = { fg = cp.catppuccin19, style = "italic" }, -- For includes: #include in C, use or extern crate in Rust, or require in Lua.
+		TSInclude = { fg = cp.catppuccin19, style = "NONE" }, -- For includes: #include in C, use or extern crate in Rust, or require in Lua.
 		TSOperator = { fg = operators, style = "bold" }, -- For any operator: +, but also -> and * in cp.
 		TSKeywordOperator = { fg = operators, style = "bold" }, -- For new keyword operator
 		TSPunctSpecial = { fg = cp.catppuccin19, style = "bold" }, -- For special punctutation that does not fall in the catagories before.
 
-		TSFloat = { fg = math_logic, style = "bold,italic" }, -- For floats.
-		TSNumber = { fg = math_logic, style = "bold,italic" }, -- For all numbers
-		TSBoolean = { fg = math_logic, style = "bold,italic" }, -- For booleans.
+		TSFloat = { fg = math_logic, style = "NONE" }, -- For floats.
+		TSNumber = { fg = math_logic, style = "bold" }, -- For all numbers
+		TSBoolean = { fg = math_logic, style = "bold" }, -- For booleans.
 
 		TSConstructor = { fg = cp.catppuccin20 }, -- For constructor calls and definitions: = { } in Lua, and Java constructors.
 		TSConstant = { fg = cp.catppuccin6 }, -- For constants
@@ -30,11 +30,11 @@ function M.get(cp)
 		-- builtin
 		TSConstBuiltin = { fg = cp.catppuccin20, style = cnf.styles.keywords }, -- For constant that are built in the language: nil in Lua.
 		TSFuncBuiltin = { fg = cp.catppuccin6, style = "italic" }, -- For builtin functions: table.insert in Lua.
-		TSTypeBuiltin = { fg = cp.catppuccin20, style = "italic" }, -- For builtin types.
+		TSTypeBuiltin = { fg = cp.catppuccin20, style = "NONE" }, -- For builtin types.
 		TSVariableBuiltin = { fg = cp.catppuccin5, style = "italic" }, -- Variable names that are defined by the languages, like this or self.
 
 		TSFunction = { fg = cp.catppuccin9, style = cnf.styles.functions }, -- For function (calls and definitions).
-		TSFuncMacro = { fg = cp.catppuccin5 }, -- For macro defined functions (calls and definitions): each macro_rules in Ruscp.
+		TSFuncMacro = { fg = cp.catppuccin5, style = "NONE" }, -- For macro defined functions (calls and definitions): each macro_rules in Ruscp.
 		TSParameter = { fg = cp.catppuccin21, style = "italic" }, -- For parameters of a function.
 		TSKeywordFunction = { fg = cp.catppuccin4, style = cnf.styles.keywords }, -- For keywords used to define a fuction.
 		TSKeyword = { fg = keywords, style = cnf.styles.keywords }, -- For keywords that don't fall in previous categories.
